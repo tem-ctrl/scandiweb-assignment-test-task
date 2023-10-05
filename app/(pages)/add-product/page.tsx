@@ -1,7 +1,26 @@
+// 'use client'
+
+import FormTextInput from '@/app/components/common/FomTextInput';
+import SelectProductType from '@/app/components/common/SelectProductType';
 import { Metadata, NextPage } from 'next';
+// import { useState } from 'react';
 
 const AddProductPage: NextPage = () => {
-	return <main> Add New Product Page </main>;
+	// const [productType, setProductType] = useState('dvd');
+
+	return (
+		<main className="main addproduct">
+			<form id="product_form">
+				<p className="required">All fields are required !</p>
+				<FormTextInput label="SKU" placeholder="Enter product SKU" mandatory />
+				<FormTextInput label="Name" placeholder="Enter product name" mandatory />
+				<FormTextInput label="Price ($)" placeholder="Enter product price" mandatory step="any" />
+				<SelectProductType
+				// onChange={(e) => setProductType(e.target.value.toLocaleLowerCase())}
+				/>
+			</form>
+		</main>
+	);
 };
 
 export default AddProductPage;

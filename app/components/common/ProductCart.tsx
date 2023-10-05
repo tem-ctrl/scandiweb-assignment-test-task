@@ -2,13 +2,9 @@
 
 import React, { useState } from 'react';
 import { PROPERTY_MAP } from '@/app/utils/constants';
-import { ProdoductType, Product, ProductProperty } from '@/app/utils/types';
+import { ProdoductType, ProductCard } from '@/app/utils/types';
 
-interface ProductCardProps extends Product {
-	property: ProductProperty;
-}
-
-const ProductCard = ({ sku, name, price, type, property }: ProductCardProps) => {
+const ProductCard = ({ sku, name, price, type, property }: ProductCard) => {
 	const [checked, setChecked] = useState(false);
 	// Set property to be displayed on product card: Size, Weight or Dimensions
 	const setCustomProp = (productType: ProdoductType, value: number | string): string => {

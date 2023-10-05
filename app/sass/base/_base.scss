@@ -10,9 +10,6 @@ body {
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
   min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
 }
 
 .main {
@@ -20,6 +17,7 @@ body {
   flex-grow: 1;
   min-height: calc(100dvh - $header-height - $footer-height);
   padding: 45px $desktop-margin;
+  color: black;
 
   @include tablet {
     padding: 30px $tablet-margin;

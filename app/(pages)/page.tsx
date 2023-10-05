@@ -1,13 +1,47 @@
 import { Metadata, NextPage } from 'next';
+import LinkButton from '@/app/components/common/LinkButton';
+import ProductCard from '@/app/components/common/ProductCart';
+import { PAGES } from '@/app/config/routes';
+import { prepareData } from '@/app/utils/data';
+import { Product } from '@/app/utils/types';
 
-const HomePage: NextPage = () => {
-	return <main> Home Page </main>;
+const HomePage: NextPage = async () => {
+	const products = await getProducts();
+
+	return (
+		<main className="main home">
+			{products && (
+				<>
+					{products.length > 0 ? (
+						products
+							.map(prepareData)
+							.map((product) => <ProductCard key={product.sku} {...product} />)
+					) : (
+						<div className="home-empty">
+							<h2 className="home-empty-title">No product found !</h2>
+							<LinkButton text="Add New Product" href={PAGES.addProduct} />
+						</div>
+					)}
+				</>
+			)}
+		</main>
+	);
 };
 
 export default HomePage;
 
+export const getProducts = async (): Promise<Product[]> => {
+	const response = await fetch('http:localhost:3000/data/products.json');
+
+	if (!response.ok) {
+		return Promise.resolve([]);
+	}
+
+	return response.json();
+};
+
 export const metadata: Metadata = {
-	title: 'Home - Scandiweb Assigntment Test',
+	title: 'Home - Scandiweb Junior Developer Test Assignment',
 	description: `This products store web application developed by me Gilbert Temgoua as part of
   requirements for the position of Junior Developer position application.
   This position is a fully remote job but the advertising company Scandiweb has
