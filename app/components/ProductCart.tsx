@@ -2,12 +2,12 @@
 
 import React, { useState } from 'react';
 import { PROPERTY_MAP } from '@/app/utils/constants';
-import { ProdoductType, ProductCard } from '@/app/utils/types';
+import { ProductType, ProductCard } from '@/app/utils/types';
 
 const ProductCard = ({ sku, name, price, type, property }: ProductCard) => {
 	const [checked, setChecked] = useState(false);
 	// Set property to be displayed on product card: Size, Weight or Dimensions
-	const setCustomProp = (productType: ProdoductType, value: number | string): string => {
+	const setCustomProp = (productType: ProductType, value: number | string): string => {
 		let [label, unit] = PROPERTY_MAP[productType].cardLabel;
 
 		return `${label} ${value} ${unit}`;

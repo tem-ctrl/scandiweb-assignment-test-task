@@ -1,10 +1,10 @@
-export type ProdoductType = 'book' | 'dvd' | 'furniture';
+export type ProductType = 'book' | 'dvd' | 'furniture';
 
 export interface Product {
 	sku: string;
 	name: string;
 	price: number;
-	type: ProdoductType;
+	type: ProductType;
 	size?: number;
 	weight?: number;
 	width?: number;

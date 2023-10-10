@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 // import { deleteSelected } from '../utils/utils'
 import { usePathname } from 'next/navigation';
 import { PAGES } from '@/app/config/routes';
-import LinkButton from '@/app/components/common/LinkButton';
-import SubmitButton from '@/app/components/common/SubmitButton';
+import LinkButton from '@/app/components/LinkButton';
+import SubmitButton from '@/app/components/SubmitButton';
 
 const Header = () => {
 	const [isHome, setIsHome] = useState(true);

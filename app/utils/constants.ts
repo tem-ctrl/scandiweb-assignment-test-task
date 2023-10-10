@@ -1,6 +1,9 @@
-import { ProdoductType, ProductProperties } from '@/app/utils/types';
+import { ProductType, ProductProperties } from '@/app/utils/types';
+import { toast } from 'react-toastify';
 
-export const PROPERTY_MAP: Record<ProdoductType, ProductProperties> = {
+export const FIXED_ATTRIBUTES = ['sku', 'name', 'price', 'type'];
+
+export const PROPERTY_MAP: Record<ProductType, ProductProperties> = {
 	dvd: {
 		property: 'size',
 		attributes: ['size'],
@@ -19,4 +22,18 @@ export const PROPERTY_MAP: Record<ProdoductType, ProductProperties> = {
 		skuInitials: 'TR1',
 		cardLabel: ['Dimension:', ''],
 	},
+};
+
+export const ERRORS = {
+	required: 'Please submit required data',
+	type: 'Please provide the data of indicated type',
+};
+
+export const TOAST_OPTIONS = {
+	autoClose: 5000,
+	type: toast.TYPE.ERROR,
+	hideProgressBar: false,
+	position: toast.POSITION.TOP_CENTER,
+	pauseOnHover: true,
+	pauseOnFocusLoss: false,
 };

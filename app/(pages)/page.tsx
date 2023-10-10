@@ -1,9 +1,10 @@
 import { Metadata, NextPage } from 'next';
-import LinkButton from '@/app/components/common/LinkButton';
-import ProductCard from '@/app/components/common/ProductCart';
+import LinkButton from '@/app/components/LinkButton';
+import ProductCard from '@/app/components/ProductCart';
 import { PAGES } from '@/app/config/routes';
 import { prepareData } from '@/app/utils/data';
 import { Product } from '@/app/utils/types';
+import { API } from '@/app/config/api';
 
 const HomePage: NextPage = async () => {
 	const products = await getProducts();
@@ -31,7 +32,8 @@ const HomePage: NextPage = async () => {
 export default HomePage;
 
 export const getProducts = async (): Promise<Product[]> => {
-	const response = await fetch('http:localhost:3000/data/products.json');
+	// 'http:localhost:3000/data/products.json'
+	const response = await fetch(API.getProducts);
 
 	if (!response.ok) {
 		return Promise.resolve([]);

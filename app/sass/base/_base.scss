@@ -9,13 +9,13 @@ body {
 
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
-  min-height: 100dvh;
+  min-height: 100vh;
 }
 
 .main {
   background-color: $color-bg;
   flex-grow: 1;
-  min-height: calc(100dvh - $header-height - $footer-height);
+  min-height: calc(100vh - $header-height - $footer-height);
   padding: 45px $desktop-margin;
   color: black;
 

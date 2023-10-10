@@ -1,9 +1,10 @@
-import Header from '@/app/components/layout/Header';
+import Header from '@/app/components/Header';
 import './globals.scss';
+import 'react-toastify/dist/ReactToastify.min.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Footer from '@/app/components/layout/Footer';
-import Providers from '@/app/components/layout/Providers';
+import Footer from '@/app/components/Footer';
+import Providers from '@/app/components/Providers';
 
 const inter = Inter({ subsets: ['latin'] });
 

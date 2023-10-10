@@ -1,5 +1,7 @@
+const apiHome = process.env.NEXT_PUBLIC_API_URL;
+
 export const API = {
-	getProducts: '/',
-	addProduct: '/add-product',
-	massDelete: '/mass-delete',
+	getProducts: `${apiHome}/`,
+	addProduct: `${apiHome}/add-product`,
+	massDelete: `${apiHome}//mass-delete`,
 } as const;
