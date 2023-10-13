@@ -2,7 +2,7 @@
   @include flex($di: column, $jc: center, $ga: 20px, $ai:center);
   @include rectangle($w: 280px, $h: 220px);
   text-align: center;
-  border-radius: 15px;
+  border-radius: 12px;
   padding: 20px;
   font-size: 18px;
   background: linear-gradient(

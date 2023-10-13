@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { PROPERTY_MAP } from '@/app/utils/constants';
 import { ProductType, ProductCard } from '@/app/utils/types';
+import useProductContext from '@/app/hooks/useProductContext';
 
 const ProductCard = ({ sku, name, price, type, property }: ProductCard) => {
-	const [checked, setChecked] = useState(false);
+	const { toDeleteList, addToDeleteList, removeFromDeleteList } = useProductContext();
+	const [checked, setChecked] = useState(toDeleteList[type].includes(sku));
 	// Set property to be displayed on product card: Size, Weight or Dimensions
 	const setCustomProp = (productType: ProductType, value: number | string): string => {
 		let [label, unit] = PROPERTY_MAP[productType].cardLabel;
@@ -13,16 +15,29 @@ const ProductCard = ({ sku, name, price, type, property }: ProductCard) => {
 		return `${label} ${value} ${unit}`;
 	};
 
+	const onChange = (e: ChangeEvent<HTMLInputElement>): void => {
+		let isChecked = e.target.checked;
+
+		setChecked(isChecked);
+
+		if (isChecked) {
+			addToDeleteList({ type, sku });
+		} else {
+			removeFromDeleteList({ type, sku });
+		}
+	};
+
 	return (
-		<div className={checked ? 'product product-checked' : 'product'}>
+		<div className={`${checked ? 'product-checked' : ''} product`}>
 			<div className="product-checkbox">
 				<label className="switch">
 					<input
 						type="checkbox"
 						className="delete-checkbox"
-						onChange={(e) => setChecked(e.target.checked)}
+						checked={checked}
+						onChange={onChange}
 					/>
-					<div className="slider"></div>
+					<div className="slider" />
 				</label>
 			</div>
 			<div className="product-desc">

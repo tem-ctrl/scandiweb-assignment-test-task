@@ -13,11 +13,9 @@ body {
 }
 
 .main {
-  background-color: $color-bg;
   flex-grow: 1;
   min-height: calc(100vh - $header-height - $footer-height);
   padding: 45px $desktop-margin;
-  color: black;
 
   @include tablet {
     padding: 30px $tablet-margin;

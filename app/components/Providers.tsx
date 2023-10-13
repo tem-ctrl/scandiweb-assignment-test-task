@@ -4,13 +4,16 @@
 import { SWRConfig } from 'swr';
 import { swrDefaultConfig } from '@/app/config/swr';
 import { ToastContainer } from 'react-toastify';
+import ProductProvider from '@/app/contexts/ProductContext';
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
 	return (
-		// <ThemeProvider attribute='class' enableSystem enableColorScheme>
+		// <ThemeProvider enableSystem enableColorScheme disableTransitionOnChange>
 		<SWRConfig value={swrDefaultConfig}>
-			{children}
-			<ToastContainer />
+			<ProductProvider>
+				{children}
+				<ToastContainer />
+			</ProductProvider>
 		</SWRConfig>
 		// </ThemeProvider>
 	);

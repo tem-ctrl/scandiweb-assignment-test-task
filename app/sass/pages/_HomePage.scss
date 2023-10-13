@@ -1,5 +1,5 @@
 .home {
-  @include flex($wr: wrap, $ga: 30px, $jc: center, $ai: flex-start);
+  @include flex($wr: wrap, $ga: 20px, $jc: center, $ai: flex-start);
   &-empty {
     @include flex($di: column, $jc: center, $ga: 20px);
     text-align: center;

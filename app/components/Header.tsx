@@ -6,19 +6,16 @@ import { usePathname } from 'next/navigation';
 import { PAGES } from '@/app/config/routes';
 import LinkButton from '@/app/components/LinkButton';
 import SubmitButton from '@/app/components/SubmitButton';
+import useProductContext from '@/app/hooks/useProductContext';
 
 const Header = () => {
 	const [isHome, setIsHome] = useState(true);
 	const pathname = usePathname();
+	const { massDelete } = useProductContext();
 
 	useEffect(() => {
 		setIsHome(pathname === PAGES.home);
 	}, [pathname]);
-
-	const massDelete = (e: MouseEvent) => {
-		e.preventDefault();
-		// deleteSelected()
-	};
 
 	return (
 		<header className="header">
