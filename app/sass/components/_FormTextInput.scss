@@ -13,23 +13,25 @@
 	}
 
 	&-body {
-		@include flex($jc: flex-start, $ga: 5px, $di: column);
+		@include flex($jc: flex-start, $ga: 0px, $di: column);
 		@include rectangle($w: 70%, $h: fit-content);
 		&-desc,
 		&-error {
 			align-self: flex-start;
 			color: #575454;
 			font-size: 14px;
+      margin-top: 0px;
 		}
 		&-error {
 			color: $color-danger;
+      height: 15px;
 			&-none {
 				opacity: 0;
 			}
 		}
 	}
 
-	&-input {
+	&-input{
 		@include rectangle($h: 40px, $w: 100%);
 		font-size: 18px;
 		border-radius: 5px;

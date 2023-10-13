@@ -14,15 +14,15 @@ const FormTextInput = forwardRef<HTMLInputElement, FormTextInputProps>((props, r
 	return (
 		<label className={`${className} label`}>
 			<p className="label-text">
-				{label} {mandatory && <span className="required">*</span>}
+				{label} {mandatory ? <span className="required">*</span> : null}
 			</p>
 			<div className="label-body">
 				<input
 					{...restProps}
 					ref={ref}
-					className={`${error ? 'label-input label-input-error' : 'label-input'}`}
+					className={`${error ? ' label-input-error' : ''} label-input`}
 				/>
-				<p className={`${error ? 'label-body-error' : 'label-body-error-none'}`}>{error}</p>
+				<p className={`${!error ? 'label-body-error-none' : ' '} label-body-error`}>{error}</p>
 			</div>
 		</label>
 	);
