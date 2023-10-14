@@ -30,10 +30,7 @@ export const ERRORS = {
 };
 
 export const TOAST_OPTIONS = {
-	autoClose: 5000,
 	type: toast.TYPE.ERROR,
-	hideProgressBar: false,
 	position: toast.POSITION.TOP_CENTER,
-	pauseOnHover: true,
 	pauseOnFocusLoss: false,
 };

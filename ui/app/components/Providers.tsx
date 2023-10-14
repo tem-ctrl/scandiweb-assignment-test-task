@@ -12,7 +12,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
 		<SWRConfig value={swrDefaultConfig}>
 			<ProductProvider>
 				{children}
-				<ToastContainer />
+				<ToastContainer  />
 			</ProductProvider>
 		</SWRConfig>
 		// </ThemeProvider>

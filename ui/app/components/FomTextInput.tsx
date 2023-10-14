@@ -13,9 +13,9 @@ const FormTextInput = forwardRef<HTMLInputElement, FormTextInputProps>((props, r
 
 	return (
 		<label className={`${className} label`}>
-			<p className="label-text">
+			<span className="label-text">
 				{label} {mandatory ? <span className="required">*</span> : null}
-			</p>
+			</span>
 			<div className="label-body">
 				<input
 					{...restProps}
