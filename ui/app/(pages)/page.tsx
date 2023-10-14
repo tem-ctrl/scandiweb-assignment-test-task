@@ -7,7 +7,7 @@ export default HomePage;
 
 export const metadata: Metadata = {
 	title: 'Home - Scandiweb Junior Developer Test Assignment',
-	description: `This products store web application developed by me Gilbert Temgoua as part of
+	description: `This is a products store web application developed by me Gilbert Temgoua as part of
   requirements for the position of Junior Developer position application.
   This position is a fully remote job but the advertising company Scandiweb has
   it headquarters in Riga, Latvia. The application is built with NextJs,

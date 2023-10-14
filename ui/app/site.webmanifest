@@ -1,0 +1,21 @@
+{
+  "name": "Scandiweb Juniors Developer Test task",
+  "short_name": "Scandiweb Test",
+  "description": "This is a products store web application developed by me Gilbert Temgoua as part of requirements for the position of Junior Developer position application. This position is a fully remote job but the advertising company Scandiweb has it headquarters in Riga, Latvia. The application is built with NextJs, TypeScript, Sass, PHP, MySQL. The application consists of two pages, the home page in which displays the list of products and a second page containing the product creation form.",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#8a2be2",
+  "background_color": "#fbfdff",
+  "display": "standalone"
+}

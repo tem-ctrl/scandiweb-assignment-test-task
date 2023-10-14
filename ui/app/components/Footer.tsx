@@ -39,7 +39,7 @@ const Footer = () => {
 					<FooterItem key={`footer-link-${i}`} {...item} />
 				))}
 			</div>
-			<p className="footer-copyright">© {new Date().getFullYear()} Gilbert Temgoua</p>
+			<p className="footer-copyright">© 2023 Gilbert Temgoua</p>
 		</footer>
 	);
 };
