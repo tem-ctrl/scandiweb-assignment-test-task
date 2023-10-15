@@ -12,7 +12,7 @@ const ProductCard = ({ sku, name, price, type, property }: ProductCard) => {
 	const setCustomProp = (productType: ProductType, value: number | string): string => {
 		let [label, unit] = PROPERTY_MAP[productType].cardLabel;
 
-		return `${label} ${value} ${unit}`;
+		return `${label} ${value}${unit}`;
 	};
 
 	const onChange = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -31,9 +31,11 @@ const ProductCard = ({ sku, name, price, type, property }: ProductCard) => {
 		<div className={`${checked ? 'product-checked' : ''} product`}>
 			<div className='product-checkbox'>
 				<label className='switch'>
+          <span className='sr-only'>{sku}</span>
 					<input
 						type='checkbox'
 						className='delete-checkbox'
+            id={sku}
 						checked={checked}
 						onChange={onChange}
 					/>

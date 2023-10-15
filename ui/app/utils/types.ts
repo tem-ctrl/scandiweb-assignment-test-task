@@ -23,11 +23,6 @@ export type ProductProperties = {
 	cardLabel: string[];
 };
 
-export type FooterLink = {
-	href: string;
-	icon: React.ReactNode;
-};
-
 export interface ProductCard extends Product {
 	property: string;
 }

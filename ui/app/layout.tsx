@@ -23,12 +23,13 @@ export const metadata: Metadata = {
   twitter: {
     images: '/twitter-image.png',
   },
-  keywords: ['Next.js', 'TypeScript', 'PHP', 'MySQL'],
+  keywords: ['Next.js', 'TypeScript', 'PHP', 'MySQL', 'Job seeking'],
   formatDetection: {
     email: true,
     address: true,
     telephone: true,
-  }
+  },
+  robots: '/robot.txt',
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {

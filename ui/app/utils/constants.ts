@@ -8,13 +8,13 @@ export const PROPERTY_MAP: Record<ProductType, ProductProperties> = {
 		property: 'size',
 		attributes: ['size'],
 		skuInitials: 'JVC',
-		cardLabel: ['Size:', '(MB)'],
+		cardLabel: ['Size:', ' MB'],
 	},
 	book: {
 		property: 'weight',
 		attributes: ['weight'],
 		skuInitials: 'GGW',
-		cardLabel: ['Weight:', '(KG)'],
+		cardLabel: ['Weight:', 'KG'],
 	},
 	furniture: {
 		property: 'dimensions',

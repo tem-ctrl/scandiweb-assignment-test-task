@@ -1,12 +1,18 @@
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { TbWorld } from 'react-icons/tb';
 import Link from 'next/link';
-import { FooterLink } from '@/app/utils/types';
 
-const FooterItem = ({ href, icon }: FooterLink) => {
+type FooterLink = {
+	href: string;
+	icon: React.ReactNode;
+  name: string;
+};
+
+const FooterItem = ({ href, icon, name }: FooterLink) => {
 	return (
 		<Link href={href} target='_blank' className='footer-link'>
 			<span className='footer-icon'>{icon}</span>
+      <span className='sr-only'>{name}</span>
 		</Link>
 	);
 };
@@ -16,18 +22,22 @@ const Footer = () => {
 		{
 			href: 'https://linkedin.com/in/temgoua',
 			icon: <FaLinkedin />,
+      name: 'LinkedIn profile',
 		},
 		{
 			href: 'https://github.com/tem-ctrl',
 			icon: <FaGithub />,
+      name: 'GitHub profile',
 		},
 		{
 			href: 'https://wa.me/237651331062',
 			icon: <FaWhatsapp />,
+      name: 'WhatsApp contact',
 		},
 		{
 			href: 'https://gtemgoua.vercel.app',
 			icon: <TbWorld />,
+      name: 'Personal website and portfolio'
 		},
 	];
 
