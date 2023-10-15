@@ -1,7 +1,15 @@
 import { Metadata, NextPage } from 'next';
 import ProductsList from '@/app/components/ProductsList';
+import Header from '@/app/components/Header';
 
-const HomePage: NextPage = () => <ProductsList />;
+const HomePage: NextPage = () => {
+  return (
+    <>
+      <Header isHome />
+      <ProductsList />
+    </>
+  )
+};
 
 export default HomePage;
 

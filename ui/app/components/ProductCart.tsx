@@ -29,22 +29,22 @@ const ProductCard = ({ sku, name, price, type, property }: ProductCard) => {
 
 	return (
 		<div className={`${checked ? 'product-checked' : ''} product`}>
-			<div className="product-checkbox">
-				<label className="switch">
+			<div className='product-checkbox'>
+				<label className='switch'>
 					<input
-						type="checkbox"
-						className="delete-checkbox"
+						type='checkbox'
+						className='delete-checkbox'
 						checked={checked}
 						onChange={onChange}
 					/>
-					<div className="slider" />
+					<div className='slider' />
 				</label>
 			</div>
-			<div className="product-desc">
-				<p className="product-desc-sku">{sku}</p>
-				<p className="product-desc-name">{name}</p>
-				<p className="product-desc-price">{price} $</p>
-				<p className="product-desc-other">{setCustomProp(type, property)}</p>
+			<div className='product-desc'>
+				<p className='product-desc-sku'>{sku}</p>
+				<p className='product-desc-name'>{name}</p>
+				<p className='product-desc-price'>{price} $</p>
+				<p className='product-desc-other'>{setCustomProp(type, property)}</p>
 			</div>
 		</div>
 	);

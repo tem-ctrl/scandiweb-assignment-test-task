@@ -13,7 +13,7 @@ interface SelectProductTypeProps extends SelectHTMLAttributes<HTMLSelectElement>
 const SelectProductType = forwardRef<HTMLSelectElement, SelectProductTypeProps>((props, ref) => {
 	const {
 		label = 'Type Switcher',
-		className,
+		className = '',
 		setProductType,
 		productType = 'dvd',
 		...restProps
@@ -21,26 +21,26 @@ const SelectProductType = forwardRef<HTMLSelectElement, SelectProductTypeProps>(
 
 	return (
 		<label className={`${className} label`}>
-			<span className="label-text label-text-select">{label}</span>
-			<div className="label-body">
+			<span className='label-text label-text-select'>{label}</span>
+			<div className='label-body'>
 				<select
-					id="productType"
-					className="label-input"
+					id='productType'
+					className='label-input'
 					{...restProps}
 					ref={ref}
 					onChange={(e) => setProductType(e.target.value.toLocaleLowerCase() as ProductType)}
 				>
-					<option value="DVD" id="DVD">
+					<option value='DVD' id='DVD'>
 						DVD
 					</option>
-					<option value="Book" id="Book">
+					<option value='Book' id='Book'>
 						Book
 					</option>
-					<option value="Furniture" id="Furniture">
+					<option value='Furniture' id='Furniture'>
 						Furniture
 					</option>
 				</select>
-				<span className="label-body-desc special">{`Please, provide ${PROPERTY_MAP[productType].property}`}</span>
+				<span className='label-body-desc special'>{`Please, provide ${PROPERTY_MAP[productType].property}`}</span>
 			</div>
 		</label>
 	);

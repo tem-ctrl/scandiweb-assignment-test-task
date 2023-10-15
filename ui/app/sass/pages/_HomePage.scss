@@ -4,6 +4,7 @@
     @include flex($di: column, $jc: center, $ga: 20px);
     text-align: center;
     align-self: center;
+    color: $color-primary;
 
     &-title {
       font-size: 48px;

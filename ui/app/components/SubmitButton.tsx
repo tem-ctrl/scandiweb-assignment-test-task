@@ -21,7 +21,7 @@ const SubmitButton: FC<SubmitButtonProps> = ({
 		<button
 			className={`${className} button`}
 			id={id}
-			type="submit"
+			type='submit'
 			form={formName}
 			onClick={onClick}
 		>

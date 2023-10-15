@@ -9,18 +9,18 @@ interface FormTextInputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const FormTextInput = forwardRef<HTMLInputElement, FormTextInputProps>((props, ref) => {
-	const { label, className, error = '', mandatory, ...restProps } = props;
+	const { label, className = '', error = '', mandatory, ...restProps } = props;
 
 	return (
 		<label className={`${className} label`}>
-			<span className="label-text">
-				{label} {mandatory ? <span className="required">*</span> : null}
+			<span className='label-text'>
+				{label} {mandatory ? <span className='required'>*</span> : null}
 			</span>
-			<div className="label-body">
+			<div className='label-body'>
 				<input
 					{...restProps}
 					ref={ref}
-					className={`${error ? ' label-input-error' : ''} label-input`}
+					className={`${error ? 'label-input-error' : ''} label-input`}
 				/>
 				<p className={`${!error ? 'label-body-error-none' : ' '} label-body-error`}>{error}</p>
 			</div>

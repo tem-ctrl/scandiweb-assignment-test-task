@@ -5,8 +5,8 @@ import { FooterLink } from '@/app/utils/types';
 
 const FooterItem = ({ href, icon }: FooterLink) => {
 	return (
-		<Link href={href} target="_blank" className="footer-link">
-			<span className="footer-icon">{icon}</span>
+		<Link href={href} target='_blank' className='footer-link'>
+			<span className='footer-icon'>{icon}</span>
 		</Link>
 	);
 };
@@ -32,14 +32,14 @@ const Footer = () => {
 	];
 
 	return (
-		<footer className="footer">
-			<h2 className="footer-title">Scandiweb Test Assignment</h2>
-			<div className="footer-links">
+		<footer className='footer'>
+			<h2 className='footer-title'>Scandiweb Test Assignment</h2>
+			<div className='footer-links'>
 				{FOOTER_LINKS.map((item, i) => (
 					<FooterItem key={`footer-link-${i}`} {...item} />
 				))}
 			</div>
-			<p className="footer-copyright">© 2023 Gilbert Temgoua</p>
+			<p className='footer-copyright'>© 2023 Gilbert Temgoua</p>
 		</footer>
 	);
 };

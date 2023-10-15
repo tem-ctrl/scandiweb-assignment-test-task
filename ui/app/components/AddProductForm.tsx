@@ -83,51 +83,55 @@ const AddProductForm: FC<AddProductFormProps> = ({ className = '' }) => {
 	};
 
 	return (
-		<form onSubmit={onSubmit} id="product_form" className={className}>
-			<p className="required">All fields are required !</p>
+		<form onSubmit={onSubmit} id='product_form' className={className}>
+			<p className='required'>All fields are required !</p>
 			<FormTextInput
 				{...register('sku')}
-				label="SKU"
-				placeholder="Enter product SKU"
+        id='sku'
+				label='SKU'
+				placeholder='Enter product SKU'
 				error={skuError ? 'sku value taken, choose a different one' : ''}
 				mandatory
 			/>
 			<FormTextInput
 				{...register('name')}
-				label="Name"
-				placeholder="Enter product name"
+        id='name'
+				label='Name'
+				placeholder='Enter product name'
 				mandatory
 			/>
 			<FormTextInput
 				{...register('price')}
-				label="Price ($)"
-				placeholder="Enter product price"
-				type="number"
-				step="any"
+				label='Price ($)'
+        id='price'
+				placeholder='Enter product price'
+				type='number'
+				step='any'
 				mandatory
 			/>
 			<SelectProductType
 				productType={productType}
 				setProductType={setProductType}
 				{...register('type')}
+        id='productType'
 			/>
 			{productType === 'dvd' && (
 				<FormTextInput
 					{...register('size')}
-					label="Size (MB)"
-					id="size"
-					type="number"
-					step="any"
+					label='Size (MB)'
+					id='size'
+					type='number'
+					step='any'
 					mandatory
 				/>
 			)}
 			{productType === 'book' && (
 				<FormTextInput
 					{...register('weight')}
-					label="Weight (kg)"
-					id="weight"
-					type="number"
-					step="any"
+					label='Weight (kg)'
+					id='weight'
+					type='number'
+					step='any'
 					mandatory
 				/>
 			)}
@@ -135,26 +139,26 @@ const AddProductForm: FC<AddProductFormProps> = ({ className = '' }) => {
 				<>
 					<FormTextInput
 						{...register('height')}
-						label="Height (CM)"
-						id="height"
-						type="number"
-						step="any"
+						label='Height (CM)'
+						id='height'
+						type='number'
+						step='any'
 						mandatory
 					/>
 					<FormTextInput
 						{...register('width')}
-						label="Width (CM)"
-						id="width"
-						type="number"
-						step="any"
+						label='Width (CM)'
+						id='width'
+						type='number'
+						step='any'
 						mandatory
 					/>
 					<FormTextInput
 						{...register('length')}
-						label="Length (CM)"
-						id="length"
-						type="number"
-						step="any"
+						label='Length (CM)'
+						id='length'
+						type='number'
+						step='any'
 						mandatory
 					/>
 				</>

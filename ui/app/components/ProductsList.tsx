@@ -25,9 +25,9 @@ const ProductsList: FC<ProductsListProps> = ({ className = '' }) => {
 							.map(prepareData)
 							.map((product) => <ProductCard key={product.sku} {...product} />)
 					) : (
-						<div className="home-empty">
-							<h2 className="home-empty-title">No product found !</h2>
-							<LinkButton text="Add New Product" href={PAGES.addProduct} />
+						<div className='home-empty'>
+							<h2 className='home-empty-title'>No product found !</h2>
+							<LinkButton text='Add New Product' href={PAGES.addProduct} />
 						</div>
 					)}
 				</>

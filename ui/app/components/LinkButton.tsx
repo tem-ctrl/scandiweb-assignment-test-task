@@ -10,7 +10,7 @@ interface LinkButtonProps {
 const LinkButton: FC<LinkButtonProps> = ({ className = '', text, href = '#' }) => {
 	return (
 		<Link className={`${className} button-link link`} href={href}>
-			<button className="button">{text}</button>
+			<button className='button'>{text}</button>
 		</Link>
 	);
 };

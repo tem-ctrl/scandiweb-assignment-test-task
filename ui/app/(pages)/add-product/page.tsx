@@ -1,11 +1,15 @@
 import AddProductForm from '@/app/components/AddProductForm';
+import Header from '@/app/components/Header';
 import { Metadata, NextPage } from 'next';
 
 const AddProductPage: NextPage = () => {
 	return (
-		<main className="main addproduct">
-			<AddProductForm />
-		</main>
+    <>
+      <Header />
+      <main className='main addproduct'>
+        <AddProductForm />
+      </main>
+    </>
 	);
 };
 
