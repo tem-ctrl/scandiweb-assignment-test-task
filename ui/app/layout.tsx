@@ -9,10 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'Scandiweb Junior Developer Test Assignment',
-  metadataBase: new URL('https://gtemgoua-scandiweb-test.000webhostapp.com'),
-  alternates: {
-    canonical: '/',
-  },
+  // metadataBase: new URL('https://gtemgoua-scandiweb-test.000webhostapp.com'),
 	authors: {
     name: 'Gilbert Temgoua',
     url: 'https://gtemgoua.vercel.app',
@@ -23,13 +20,13 @@ export const metadata: Metadata = {
   twitter: {
     images: '/twitter-image.png',
   },
-  keywords: ['Next.js', 'TypeScript', 'PHP', 'MySQL', 'Job seeking'],
-  formatDetection: {
-    email: true,
-    address: true,
-    telephone: true,
-  },
-  robots: '/robot.txt',
+  // keywords: ['Next.js', 'TypeScript', 'PHP', 'MySQL', 'Job seeking'],
+  // formatDetection: {
+  //   email: true,
+  //   address: true,
+  //   telephone: true,
+  // },
+  // robots: '/robots.txt',
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
