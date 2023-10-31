@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     name: 'Gilbert Temgoua',
     url: 'https://gtemgoua.vercel.app',
   },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_URL ?? '/'),
   openGraph: {
     images: '/opengraph-image.png',
   },
