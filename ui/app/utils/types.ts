@@ -1,6 +1,6 @@
 export type ProductType = 'book' | 'dvd' | 'furniture';
 
-export interface Product {
+export type Product = {
 	sku: string;
 	name: string;
 	price: number;
@@ -14,12 +14,9 @@ export interface Product {
 
 export type ProductProperty = 'size' | 'weight' | 'dimensions' | 'width' | 'height' | 'length';
 
-export type SKUInitials = 'JVC' | 'GGW' | 'TR1';
-
 export type ProductProperties = {
 	property: ProductProperty;
 	attributes: ProductProperty[];
-	skuInitials: SKUInitials;
 	cardLabel: string[];
 };
 
@@ -29,7 +26,4 @@ export interface ProductCard extends Product {
 
 export type ToDeleteListType = Record<ProductType, string[]>;
 
-export type ProductToDelete = {
-	type: ProductType;
-	sku: string;
-};
+export type ProductToDelete = Pick<Product, 'type'|'sku'>;
