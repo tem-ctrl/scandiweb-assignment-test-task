@@ -2,7 +2,7 @@ import './globals.scss';
 import 'react-toastify/dist/ReactToastify.min.css';
 import { Inter } from 'next/font/google';
 import Footer from '@/app/components/Footer';
-import Providers from '@/app/components/Providers';
+import AppProvider from '@/app/providers/AppProvider'
 import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -25,10 +25,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<html lang='en'>
 			<body className={`${inter.className}`}>
-				<Providers>
+				<AppProvider>
 					{children}
 					<Footer />
-				</Providers>
+				</AppProvider>
 			</body>
 		</html>
 	);

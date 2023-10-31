@@ -1,21 +1,18 @@
 'use client';
 
-// import { ThemeProvider } from 'next-themes';
 import { SWRConfig } from 'swr';
 import { swrDefaultConfig } from '@/app/config/swr';
 import { ToastContainer } from 'react-toastify';
-import ProductProvider from '@/app/contexts/ProductContext';
+import ProductContextProvider from '@/app/providers/ProductContextProvider';
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
 	return (
-		// <ThemeProvider enableSystem enableColorScheme disableTransitionOnChange>
 		<SWRConfig value={swrDefaultConfig}>
-			<ProductProvider>
+			<ProductContextProvider>
 				{children}
 				<ToastContainer  />
-			</ProductProvider>
+			</ProductContextProvider>
 		</SWRConfig>
-		// </ThemeProvider>
 	);
 };
 

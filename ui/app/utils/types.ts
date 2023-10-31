@@ -26,3 +26,10 @@ export type ProductProperties = {
 export interface ProductCard extends Product {
 	property: string;
 }
+
+export type ToDeleteListType = Record<ProductType, string[]>;
+
+export type ProductToDelete = {
+	type: ProductType;
+	sku: string;
+};

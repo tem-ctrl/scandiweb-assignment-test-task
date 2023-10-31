@@ -41,7 +41,7 @@ const AddProductForm: FC<AddProductFormProps> = ({ className = '' }) => {
 		toast.clearWaitingQueue();
 	};
 
-	// Generate on product type change
+	// Generate default values on product type change
 	useEffect(() => {
 		setDefaultValues(setDefaultFormValues(productType));
 	}, [productType]);
@@ -64,9 +64,7 @@ const AddProductForm: FC<AddProductFormProps> = ({ className = '' }) => {
 					}
 					setSkuError(false);
 					axios
-						.post(
-							API.addProduct,
-							{ ...submitData },
+						.post( API.addProduct, submitData,
 							{
 								headers: { 'Content-Type': 'multipart/form-data' },
 							}
