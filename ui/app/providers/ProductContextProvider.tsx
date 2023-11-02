@@ -46,6 +46,7 @@ const ProductContextProvider = ({ children }: { children: ReactNode }): ReactNod
 			)
 			.then(() => {
 				refreshData();
+        setToDeleteList(defaultDeleteList);
 				console.info('Product(s) deleted successfully !!!');
 			})
 			.catch((err) => {
